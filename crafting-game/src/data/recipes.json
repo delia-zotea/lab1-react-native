@@ -1,0 +1,30 @@
+[
+  {
+    "id": "campfire",
+    "name": "Foc de tabără",
+    "ingredients": ["wood", "stone"],
+    "result": { "id": "campfire", "name": "Foc de tabără" },
+    "isFinal": false
+  },
+  {
+    "id": "mud",
+    "name": "Noroi",
+    "ingredients": ["water", "stone"],
+    "result": { "id": "mud", "name": "Noroi" },
+    "isFinal": false
+  },
+  {
+    "id": "mud_pot",
+    "name": "Vas de Noroi",
+    "ingredients": ["mud", "wood"],
+    "result": { "id": "mud_pot", "name": "Vas de Noroi" },
+    "isFinal": false
+  },
+  {
+    "id": "fireplace",
+    "name": "Șemineu",
+    "ingredients": ["campfire", "mud_pot"],
+    "result": { "id": "fireplace", "name": "Șemineu" },
+    "isFinal": true
+  }
+]

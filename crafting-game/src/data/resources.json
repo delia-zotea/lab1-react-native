@@ -1,0 +1,5 @@
+[
+  { "id": "wood", "name": "Lemn" },
+  { "id": "stone", "name": "Piatra" },
+  { "id": "water", "name": "Apa" }
+]

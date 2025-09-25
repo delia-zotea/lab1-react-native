@@ -1,0 +1,169 @@
+/* Reset și font */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f5f6fa;
+  color: #333; /* text default vizibil */
+}
+
+/* Titlu */
+.title {
+  margin: 20px 0;
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #2c3e50; /* contrast bun */
+}
+
+/* Grid principal */
+.main-grid {
+  display: grid;
+  grid-template-areas:
+    "resources crafting crafting"
+    "resources inventory garbage";
+  grid-template-columns: 220px 1fr 220px;
+  grid-template-rows: auto 1fr;
+  gap: 20px;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Panouri */
+.resources,
+.crafting-area,
+.inventory-area,
+.garbage-area {
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+  color: #333; /* text clar */
+}
+
+.resources:hover,
+.crafting-area:hover,
+.inventory-area:hover,
+.garbage-area:hover {
+  transform: scale(1.01);
+}
+
+/* Culori zonale cu contrast bun */
+.resources {
+  grid-area: resources;
+  background: #dff6e5; /* verde pastel */
+}
+
+.crafting-area {
+  grid-area: crafting;
+  background: #fff3e0; /* portocaliu foarte deschis */
+}
+
+.inventory-area {
+  grid-area: inventory;
+  background: #ffffff; /* alb clar */
+}
+
+.garbage-area {
+  grid-area: garbage;
+  background: #ffe6e6; /* roșu foarte deschis */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+/* Inventory item style */
+.inventory-area li {
+  list-style: none;
+  background: #fdf7f0;
+  border: 1px solid #d3c0a3;
+  border-radius: 6px;
+  padding: 6px 10px;
+  margin: 5px 0;
+  cursor: grab;
+  transition: transform 0.2s, background 0.2s;
+  color: #333;
+}
+
+.inventory-area li:hover {
+  transform: scale(1.05);
+  background: #f0e3d2;
+}
+
+/* Butoane */
+.btn {
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+  color: #fff; /* text alb pentru contrast */
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+.clear-btn {
+  background: #e74c3c;
+}
+
+.clear-btn:hover {
+  background: #c0392b;
+}
+
+.reset-btn {
+  background: #34495e;
+}
+
+.reset-btn:hover {
+  background: #2c3e50;
+}
+
+/* Modal victorie */
+.victory-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.victory-modal {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 2px 2px 15px rgba(0,0,0,0.3);
+  animation: pop 0.3s ease-in-out;
+  color: #333;
+}
+
+.victory-modal h2 {
+  color: #27ae60;
+  margin-bottom: 15px;
+}
+
+.victory-modal button {
+  background: #007bff;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.victory-modal button:hover {
+  background: #0056b3;
+}
+
+@keyframes pop {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
